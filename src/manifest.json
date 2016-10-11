@@ -1,0 +1,21 @@
+{
+  "name" : "Emoji Extractor",
+  "version" : "1.0.0",
+  "description" : "Emoji Extractor for updating emoji listings",
+  "permissions": [
+    "declarativeContent"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "page_action": {
+     "default_icon": "icon.png",
+     "default_popup": "popup.html"
+  },
+  "content_scripts": [{
+      "matches": ["https://emojikeyboard.org/*"],
+      "js": ["content_script.js"]
+  }],
+  "manifest_version": 2
+}
